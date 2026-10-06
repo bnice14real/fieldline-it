@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Book a walkthrough — Fieldline</title>
+  <meta name="description" content="Tell Fieldline about the office, the house, or both. We reply on business days.">
+  <meta name="theme-color" content="#f3eee6">
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,520;9..144,620&family=Outfit:wght@380;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/css/site.css">
+</head>
+<body>
+  <a class="skip" href="#main">Skip to content</a>
+  <header class="site-header">
+    <a class="brand" href="/"><span class="brand-mark" aria-hidden="true"></span>FIELD LINE</a>
+    <nav class="nav" aria-label="Primary">
+      <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="nav-links">Menu</button>
+      <div class="nav-links" id="nav-links">
+        <a href="/business.html">Business</a>
+        <a href="/home.html">Home</a>
+        <a href="/#approach">Approach</a>
+        <a class="btn btn-primary" href="/contact.html" aria-current="page">Book a walkthrough</a>
+      </div>
+    </nav>
+  </header>
+  <main id="main">
+    <section>
+      <div class="wrap contact-grid">
+        <div>
+          <p class="kicker">Contact</p>
+          <h1 class="display" style="font-size:clamp(2.6rem,6vw,4.4rem)">Write it down. We will answer.</h1>
+          <p class="lede">On a business day, expect a reply the same day. If we are the wrong people for the job, we will say that too.</p>
+          <h2>Useful if you have them</h2>
+          <ul class="checklist">
+            <li>Town, and whether it is an office, a house, or both.</li>
+            <li>A photo of the modem and whatever is plugged into it.</li>
+            <li>The room that fails first.</li>
+          </ul>
+        </div>
+        <form class="form" name="consultation" method="POST" action="/thanks.html" data-netlify="true" netlify-honeypot="bot-field">
+          <input type="hidden" name="form-name" value="consultation">
+          <p class="hp"><label>Leave this empty <input name="bot-field"></label></p>
+          <div class="row">
+            <div class="field"><label for="name">Name</label><input id="name" name="name" autocomplete="name" required></div>
+            <div class="field"><label for="email">Email</label><input id="email" name="email" type="email" autocomplete="email" required></div>
+          </div>
+          <div class="row">
+            <div class="field"><label for="phone">Phone <span style="color:#5c564c">(optional)</span></label><input id="phone" name="phone" autocomplete="tel"></div>
+            <div class="field">
+              <label for="site-where">Site</label>
+              <select id="site-where" name="where">
+                <option value="business">Business</option>
+                <option value="home">Home</option>
+                <option value="both">Both</option>
+              </select>
+            </div>
+          </div>
+          <div class="row">
+            <div class="field"><label for="town">Town or neighborhood</label><input id="town" name="town" required></div>
+            <div class="field">
+              <label for="site-pain">Loudest issue</label>
+              <select id="site-pain" name="pain">
+                <option value="wifi">Wi-Fi</option>
+                <option value="outage">Outages</option>
+                <option value="backup">Backup</option>
+                <option value="newspace">New space</option>
+                <option value="security">Security</option>
+                <option value="unsure">Not sure</option>
+              </select>
+            </div>
+          </div>
+          <div class="field"><label for="message">What is going on</label><textarea id="message" name="message" required></textarea></div>
+          <p class="error" role="alert"></p>
+          <button class="btn btn-primary" type="submit">Send the note</button>
+        </form>
+      </div>
+    </section>
+  </main>
+  <footer class="wrap site-footer">
+    <div>Fieldline · infrastructure for work and home</div>
+    <div><a href="/">Home</a> · © 2026</div>
+  </footer>
+  <script src="/js/site.js"></script>
+</body>
+</html>
